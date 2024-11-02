@@ -28,8 +28,9 @@ export class SeedService {
       const no = +segments[segments.length - 2];
 
       pokemonToInsert.push({name, no});
-      await this.pokemonModel.insertMany(pokemonToInsert); 
-    })
+    });
+    await this.pokemonModel.insertMany(pokemonToInsert); 
+
 
     return 'Seed executed';
   }
